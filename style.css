@@ -1,0 +1,533 @@
+body {
+    margin: 0;
+    background-image: url(images/paper3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.texture {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url(images/paper2.jpg);
+    z-index: 3;
+    opacity: .2;
+    filter: brightness(60%);
+    pointer-events: none;
+}
+/*Header*/
+.header {
+    width: 100%;
+    height: 90px;
+    background: color #08080800;
+    position: fixed;
+    z-index: 1;
+    transition-duration: 500ms;
+}
+.tab {
+    float: right;
+    color: white;
+    padding: 35px;
+}
+.tab:hover {
+    background-color: black;
+}
+.logo img {
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 60%;
+}
+/*Boxes*/
+
+.boxes {
+    width: 100%;
+    height: 1080px;
+    background: url(images/paper.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    box-shadow: 0 0 500px rgba(0,0,0,0.3) inset;
+    filter: sepia(40%);
+    z-index: 0;
+}
+.box1 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: firstIn .5s ease-in-out;
+}
+.box11 {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.box112, .box13, .box131, .box2, .box3, .box21 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.box112 {
+    z-index: 2;
+    background-color: salmon;
+    overflow: hidden;
+}
+.box12 {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    background-color: #b543057e;
+    left: 50%;
+    animation: secondIn .5s ease-in-out .75s both;
+    z-index: 1;
+}
+.box13 { 
+    background-color:#de9c638a;
+    animation: thirdIn .5s ease-in-out 1s both;
+}
+.box131 {
+    animation: fifthIn .5s ease-in-out 1.25s both;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+}
+.box2 {
+    animation: thirdIn .5s ease-in-out .25s both;
+}
+.box3 {
+    animation: fourthIn .5s ease-in-out .5s both;
+}
+.box21 {
+    animation: fourthIn .5s ease-in-out .75s both;
+}
+
+/*Images*/
+
+.image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+.img1, .img2, .img3, .img4, .img5 {
+    transform: rotate(-45deg);
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+}
+.img1 {
+    background-image: url(images/alonzo.jpg);
+    background-size: 150%;
+    top: -50%;
+    left: -50%;
+}
+.img2 {
+    background-image: url(images/dharati.jpg);
+    background-size: 120%;
+    top: -50%;
+    left: -10%;
+    transform: rotate(-45deg) scaleX(-1);
+}
+.img3 {
+    background-image: url(images/wovenmat.jpg);
+    background-size: 120%;
+    top: -50%;
+    left: -10%;
+}
+.img4 {
+    background-image: url(images/gabbang.jpg);
+    background-size: 100%;
+    top: -40%;
+    left: -20%;
+}
+.img5 {
+    background-image: url(images/babarak.jpg);
+    background-size: 100%;
+    top: -35%;
+    left: -20%;
+}
+@font-face {
+    font-family: history;
+    src: url(Historycal-Inline.ttf);
+}
+@font-face {
+    font-family: history2;
+    src: url(Historical\ Textured.ttf);
+}
+/*Title*/
+
+.title {
+    font-family: history;
+    font-size: 150px;
+    color: white;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    animation: fadein 4s ease-in-out;
+    text-shadow: 4px 4px 6px rgba(0,0,0,0.6);
+}
+
+/*Body*/
+
+.content {
+    width: 100%;
+    height: 1000px;
+    background-color:#141414;
+    z-index: 1;
+}
+.intro {
+    width: 40%;
+    height: 40%px;
+    margin: 150px;
+    position: relative;
+    float: right;
+    color: white;
+    word-spacing: 2px;
+}
+.intro p {
+    height: 20%;
+    width: 100%;
+    font-size: 120%;
+}
+.gawad {
+    width: 300px;
+    height: 290px;
+    
+}
+h1 {
+    font-family: history2;
+    font-style: none;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.content2 {
+    width: 100%;
+    height: 615px;
+}
+
+/*Youtube*/
+
+.vid {
+    width: 100%;
+    height: 1000px;
+    background-image: url(images/bg.jpg);
+    background-size: 120%;
+    background-repeat: repeat;
+    filter: sepia(40%);
+    z-index: 0;
+}
+.vid iframe {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+/*Gallery*/
+
+.gallery {
+    width: 1500px;
+    display: flex;
+    overflow-x: scroll;
+}
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+.gallery div img {
+    width: 100%;
+    filter: grayscale(80%);
+    transition-duration: 250ms;
+}
+.gallery div img:hover {
+    box-shadow: 0px 0px 17px -5px rgba(0,0,0,0.75);
+    filter: sepia(20%) grayscale(0);  
+    cursor: pointer;
+}
+.gallery::-webkit-scrollbar {
+    display: none;
+
+}
+.gallerywrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+.gallery::before {
+    content: 'The Artists';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    font-family: history;
+    font-size: 70px;
+    margin-top: -3%;
+}
+#back, #next {
+    width: 50px;
+    cursor: pointer;
+    right: 0;
+    border-radius: 100%;
+}
+#back {
+    transform: scaleX(-1);
+    left: 0;
+}
+.copyright {
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    background-color: 	#141414;
+    color: white;
+}
+.copyright p {
+    margin-top: 25px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+.copyright2 {
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    position: absolute;
+    font-size: 15px;
+    background-color: 	#141414;
+    color: white;
+}
+.copyright2 p {
+    margin-top: 25px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+.showName {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    font-size: 0;
+    font-family: history;
+    transition-duration: 250ms;
+    padding: 0;
+    margin-top: 5%;
+}
+.artists span:hover > .showName {
+    font-size: 30px;
+}
+.artists2 span:hover > .showName {
+    font-size: 30px;
+}
+
+/*Artist Info*/
+
+.alonzo {
+    width: 100%;
+    height: 1500px;
+    display: none;
+    background-color: #e4ccab;
+}
+.dharati {
+    width: 100%;
+    height: 1500px;
+    background-color: #e4ccab;
+    display: none;
+}
+.ginaw {
+    width: 100%;
+    height: 1500px;
+    background-color: #e4ccab;
+    display: none;
+}
+.masino {
+    width: 100%;
+    height: 2000px;
+    background-color: #e4ccab;
+    display: none;
+}
+.samoan {
+    width: 100%;
+    height: 1500px;
+    background-color: #e4ccab;
+    display: none;
+}
+.uwang {
+    width: 100%;
+    height: 2000px;
+    background-color: #e4ccab;
+    display: none;
+}
+.estellita {
+    width: 100%;
+    height: 1000px;
+    background-color: #e4ccab;
+    display: none;
+}
+.haja {
+    width: 100%;
+    height: 1000px;
+    background-color: #e4ccab;
+    display: none;
+}
+.lang {
+    width: 100%;
+    height: 1000px;
+    background-color: #e4ccab;
+    display: none;
+}
+.salinta {
+    width: 100%;
+    height: 1000px;
+    background-color: #e4ccab;
+    display: none;
+}
+
+/*Artist Content*/
+
+.name {
+    font-family: history;
+    font-size: 50px;
+    line-height: 0;
+}
+.bodyContent {
+    width: 1000px;
+    height: 700px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 500px;
+}
+
+.bodyContent img {
+    float: left;
+    padding: 30px;
+}
+
+.bodyContent p {
+    padding: 20px;
+    font-size: 25px;
+    text-align: justify;
+}
+.references {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 45%;
+    text-align: center;
+    animation:  ref .5s ease-in-out;
+}
+.references p {
+    line-height: 20px;
+}
+.kimContent {
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    animation: widthAnimate 500ms ease-in-out;
+}
+.kim {
+    background: url(images/kim.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    float: left;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 1;
+    animation: fadein .5s ease-in-out;
+}
+.kimTitle {
+    float: right;
+    width: 500px;
+    height: 500px;
+    z-index: 0;
+    animation: fadein .5s ease-in-out;
+}
+.kimTitle p {
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 95%;
+    font-family: history;
+    top: 20%;
+    font-size: 50px;
+    text-align: left;
+    line-height: 35px;
+}
+/*Animation*/
+@keyframes widthAnimate {
+    from {
+        width: 300px;
+    }
+    to {
+        width: 600px;
+    }
+}
+@keyframes ref {
+    from {
+        opacity: 0;
+        margin-top: 10px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes fifthIn {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 100%;
+    }
+}
+@keyframes fourthIn {
+    from {
+        top: 0;
+    }
+    to {
+        top: 100%;
+    }
+}
+@keyframes thirdIn {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+@keyframes firstIn {
+    from {
+        top: -50%;
+    }
+    to {
+        top: 0;
+    }
+}
+@keyframes secondIn {
+    from {
+        top: 50%;
+    }
+    to {
+        top: 100%;
+    }
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
